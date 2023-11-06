@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Love Message</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffcccc; /* Light pink background */
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #ff0066; /* Pink heading color */
+        }
+        p {
+            font-size: 1.2em;
+            color: #333; /* Dark text color */
+        }
+        #loveButton {
+            background-color: #ff0066; /* Pink button background */
+            color: #fff; /* White button text color */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+        #loveButton:hover {
+            background-color: #ff3399; /* Lighter pink on hover */
+        }
+        #lovePopup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff; /* White popup background */
+            border: 2px solid #ff0066; /* Pink border */
+            padding: 20px;
+            z-index: 1;
+            animation: popup 4s ease; /* Slow-motion animation */
+        }
+        #loveMessage {
+            color: #ff0066; /* Pink message color */
+            font-weight: bold;
+        }
+        img {
+            max-width: 100%;
+            max-height: 300px; /* Adjust the height as desired to make the images larger */
+            border: 2px solid #ff0066; /* Pink border around the images */
+            border-radius: 5px; /* Rounded corners */
+            margin: 10px; /* Spacing between images */
+        }
+        #imageContainer {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        @keyframes popup {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Media queries for mobile responsiveness */
+        @media screen and (max-width: 600px) {
+            p {
+                font-size: 1em;
+            }
+            img {
+                max-height: 200px;
+            }
+        }
+
+        /* Animation for the envelope */
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        #envelope {
+            animation: float 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cheer Up, My Love!</h1>
+    <p>
+        Remember, every storm passes, and the sun shines again. You're my sunshine, and I'm here to brighten your day. Your strength and beauty amaze me, and I'm lucky to have you by my side.
+    </p>
+    <p>
+        You're not alone in this. Together, we can conquer anything. So, let's open this message with a smile and embrace the happiness and love that surrounds us.
+    </p>
+    <p>
+        You are my heart's desire, and I cherish every moment with you. I love you more than words can express, and I'm here to remind you of the happiness we bring to each other's lives.
+    </p>
+    <button id="loveButton" onclick="showLovePopup()">Show Love</button>
+    <img id="envelope" src="envelope.png" alt="Love Letter Envelope" />
+    <div id="lovePopup">
+        <p id="loveMessage">
+            You're looking like this right now. Agar Magnum se mood achha hojaye ga to tell me. I want you to smile :)
+        </p>
+        <div id="imageContainer">
+            <img src="cutie.jpg" alt="Your Image" />
+            <!-- <img src="you.jpg" alt="Your Loved One" /> -->
+        </div>
+    </div>
+    <script>
+        function showLovePopup() {
+            var popup = document.getElementById("lovePopup");
+            popup.style.display = "block";
+        }
+    </script>
+</body>
+</html>
